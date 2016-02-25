@@ -1,0 +1,26 @@
+<?page title="Data Person" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Data Kecamatan" border="normal" width="60%"
+		apply="zk.maven.controller.PersonController" id="personWnd">
+		<toolbar>
+			<toolbarbutton label="Tambah" image="img/icon/insert.png" popup="Tambah Data" id="btnInsert"/>
+			<toolbarbutton label="Ubah" image="img/icon/edit.png" popup="Ubah Data" id="btnUbah"/>
+			<toolbarbutton label="Hapus" image="img/icon/delete.png" popup="Hapus Data" id="btnHapus"/>
+			<toolbarbutton label="Refresh" image="img/icon/refresh.png" popup="Refresh Data" id="btnRefresh"/>		
+		</toolbar>
+		<listbox emptyMessage="No Person data found in the result"
+			id="listPerson">
+			<listhead>				
+				<listheader label="ID"/>
+				<listheader label="Name" />								
+			</listhead>
+			<template name="model">
+				<listitem value="${each}">
+					<listcell label="${each.id}"/>
+					<listcell label="${each.name}"/>					
+				</listitem>
+			</template>
+		</listbox>
+
+	</window>
+</zk>
