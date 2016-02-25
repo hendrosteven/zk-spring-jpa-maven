@@ -7,6 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import zk.maven.entity.Person;
 
+/**
+ * Data Access Object for Person Entity (tblperson)
+ * @author hendro.tampake
+ *
+ */
 
 @Repository("personDAO")
 @Transactional
